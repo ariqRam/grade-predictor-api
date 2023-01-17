@@ -46,6 +46,3 @@ def classify():
         mimetype='application/json'
     )
     return response
-
-if __name__ == "__main__":
-    app.run(port=8080)
