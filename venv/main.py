@@ -1,9 +1,12 @@
 import pickle
 from flask import Flask, request, json
+from flask_cors import CORS
 from linear.linear import linear_predict
 from clf.clf import clf_predict
 
 app = Flask(__name__)
+
+CORS(app)
 
 def load_model():
     clf = pickle.load(open('clf/clf_model.sav', 'rb'))
