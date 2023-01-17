@@ -16,7 +16,7 @@ def load_model():
 classifier, regressor = load_model()
 
 @app.route("/regress", methods=['POST'])
-@cross_origin
+@cross_origin()
 def regress():
     data = request.get_json()
 
@@ -33,7 +33,7 @@ def regress():
     return response
 
 @app.route("/classify", methods=['POST'])
-@cross_origin
+@cross_origin()
 def classify():
     data = request.get_json()
 
