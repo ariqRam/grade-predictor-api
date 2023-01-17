@@ -1,6 +1,6 @@
 import pickle
 from flask import Flask, request, json
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from linear.linear import linear_predict
 from clf.clf import clf_predict
 
@@ -16,6 +16,7 @@ def load_model():
 classifier, regressor = load_model()
 
 @app.route("/regress", methods=['POST'])
+@cross_origin
 def regress():
     data = request.get_json()
 
@@ -32,6 +33,7 @@ def regress():
     return response
 
 @app.route("/classify", methods=['POST'])
+@cross_origin
 def classify():
     data = request.get_json()
 
