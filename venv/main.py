@@ -15,7 +15,7 @@ def load_model():
 
 classifier, regressor = load_model()
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def home():
     return "Hello"
 
