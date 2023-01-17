@@ -39,4 +39,4 @@ def classify():
     return response
 
 if __name__ == "__main__":
-    app.run(port=80)
+    app.run(port=8080)
