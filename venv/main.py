@@ -15,6 +15,10 @@ def load_model():
 
 classifier, regressor = load_model()
 
+@app.route("/")
+def home():
+    return "Hello"
+
 @app.route("/regress", methods=['POST'])
 @cross_origin()
 def regress():
