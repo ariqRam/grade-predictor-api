@@ -1,0 +1,7 @@
+.vercel
+lib/
+bin/
+.vscode
+__pycache__
+clf/__pycache__
+linear/__pycache__
